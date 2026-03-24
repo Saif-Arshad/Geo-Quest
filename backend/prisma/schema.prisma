@@ -1,17 +1,75 @@
 generator client {
-  provider = "prisma-client"
-  output   = "../generated/prisma"
+  provider = "prisma-client-js"
 }
 
 datasource db {
   provider = "mongodb"
+  url      = env("DATABASE_URL")
 }
 
 model User {
+  id               String         @id @default(auto()) @map("_id") @db.ObjectId
+  email            String         @unique
+  name             String
+  profileImage     String?
+  experiencePoints Int            @default(0)
+  password         String
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+  events           events[]
+  eventMembers     eventMembers[]
+}
+
+model publicCaches {
+  id               String   @id @default(auto()) @map("_id") @db.ObjectId
+  name             String
+  experiencePoints Int
+  description      String
+  image            String
+  latitude         Float
+  isAlreadyFound   Boolean  @default(false)
+  foundBy          String?  @db.ObjectId
+  longitude        Float
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
+
+model events {
+  id           String         @id @default(auto()) @map("_id") @db.ObjectId
+  name         String
+  image        String
+  description  String
+  inviteCode   String         @unique
+  creatorId    String         @db.ObjectId
+  creator      User           @relation(fields: [creatorId], references: [id])
+  startTime    DateTime
+  endTime      DateTime
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+  eventMembers eventMembers[]
+  eventCaches  eventCaches[]
+}
+
+model eventCaches {
+  id               String  @id @default(auto()) @map("_id") @db.ObjectId
+  eventId          String  @db.ObjectId
+  name             String
+  experiencePoints Int
+  description      String
+  image            String
+  isAlreadyFound   Boolean @default(false)
+  foundBy          String? @db.ObjectId
+  latitude         Float
+  longitude        Float
+  event            events  @relation(fields: [eventId], references: [id])
+}
+
+model eventMembers {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  email     String   @unique
-  name      String
-  password  String
+  eventId   String   @db.ObjectId
+  userId    String   @db.ObjectId
+  event     events   @relation(fields: [eventId], references: [id])
+  user      User     @relation(fields: [userId], references: [id])
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
