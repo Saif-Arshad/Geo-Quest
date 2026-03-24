@@ -13,7 +13,7 @@ import onboardingData from '../data/onboardingData';
 
 const { width } = Dimensions.get('window');
 
-export default function OnboardingScreen() {
+export default function OnboardingScreen({ navigation }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const flatListRef = useRef(null);
 
@@ -28,11 +28,11 @@ export default function OnboardingScreen() {
   }).current;
 
   const handleGetStarted = () => {
-    console.log('Navigate to Sign Up / Home');
+    navigation.navigate('Register');
   };
 
   const handleSignIn = () => {
-    console.log('Navigate to Sign In');
+    navigation.navigate('Login');
   };
 
   return (
