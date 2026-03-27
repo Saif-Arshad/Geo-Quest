@@ -18,6 +18,7 @@ module.exports = {
       },
     },
     android: {
+      package: 'com.saif404.geoquest',
       adaptiveIcon: {
         backgroundColor: '#E6F4FE',
         foregroundImage: './assets/android-icon-foreground.png',
@@ -35,6 +36,9 @@ module.exports = {
     },
     extra: {
       googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY,
+      eas: {
+        projectId: 'c478fdab-2b05-4e1b-a558-a97761becb08',
+      },
     },
   },
 };
