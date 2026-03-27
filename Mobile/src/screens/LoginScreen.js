@@ -18,7 +18,7 @@ export default function LoginScreen({ navigation }) {
   const [secureText, setSecureText] = useState(true);
 
   const handleLogin = () => {
-    console.log('Login:', email, password);
+    navigation.reset({ index: 0, routes: [{ name: 'Main' }] });
   };
 
   return (
