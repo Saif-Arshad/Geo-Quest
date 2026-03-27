@@ -78,7 +78,7 @@ function LeaderboardItem({ rank, name, xp, caches, isYou, avatar }) {
         style={{
           width: 40,
           height: 40,
-          backgroundColor: '#1A4231',
+          backgroundColor: '#262626',
         }}
       >
         <Feather name="user" size={18} color="#C9A84C" />
@@ -175,7 +175,7 @@ export default function EventDetailsScreen({ navigation, route }) {
 
   return (
     <View className="flex-1 bg-primary">
-      <StatusBar barStyle="light-content" backgroundColor="#151D1A" />
+      <StatusBar barStyle="light-content" backgroundColor="#000000" />
 
       {/* Header */}
       <View
@@ -289,7 +289,7 @@ export default function EventDetailsScreen({ navigation, route }) {
             <Feather
               name="plus-circle"
               size={20}
-              color="#151D1A"
+              color="#000000"
               style={{ marginRight: 8 }}
             />
             <Text className="text-primary text-base font-bold">
@@ -335,7 +335,7 @@ export default function EventDetailsScreen({ navigation, route }) {
                   style={{
                     width: 48,
                     height: 56,
-                    backgroundColor: '#151D1A',
+                    backgroundColor: '#000000',
                     borderWidth: 1,
                     borderColor: digit ? '#C9A84C' : '#374151',
                   }}
@@ -370,7 +370,7 @@ export default function EventDetailsScreen({ navigation, route }) {
                 className="font-bold text-sm"
                 style={{
                   color:
-                    codeDigits.join('').length === 5 ? '#151D1A' : '#6B7280',
+                    codeDigits.join('').length === 5 ? '#000000' : '#6B7280',
                 }}
               >
                 Join Event

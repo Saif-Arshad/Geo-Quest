@@ -22,7 +22,7 @@ export default function CreateCacheScreen({ navigation }) {
 
   return (
     <View className="flex-1 bg-primary">
-      <StatusBar barStyle="light-content" backgroundColor="#151D1A" />
+      <StatusBar barStyle="light-content" backgroundColor="#000000" />
 
       {/* Header */}
       <View
@@ -63,14 +63,14 @@ export default function CreateCacheScreen({ navigation }) {
               className="rounded-2xl overflow-hidden"
               style={{
                 height: 220,
-                backgroundColor: '#1A2E25',
+                backgroundColor: '#171717',
               }}
             >
               {/* Map placeholder with gradient-like appearance */}
               <View
                 style={{
                   flex: 1,
-                  backgroundColor: '#2D4A3E',
+                  backgroundColor: '#262626',
                   opacity: 0.6,
                 }}
               />
@@ -85,7 +85,7 @@ export default function CreateCacheScreen({ navigation }) {
                     width: 36,
                     height: 36,
                     borderRadius: 8,
-                    backgroundColor: '#1A4231',
+                    backgroundColor: '#262626',
                     alignItems: 'center',
                     justifyContent: 'center',
                   }}
@@ -98,7 +98,7 @@ export default function CreateCacheScreen({ navigation }) {
                     width: 36,
                     height: 36,
                     borderRadius: 8,
-                    backgroundColor: '#1A4231',
+                    backgroundColor: '#262626',
                     alignItems: 'center',
                     justifyContent: 'center',
                   }}
@@ -111,7 +111,7 @@ export default function CreateCacheScreen({ navigation }) {
                     width: 36,
                     height: 36,
                     borderRadius: 8,
-                    backgroundColor: '#1A4231',
+                    backgroundColor: '#262626',
                     alignItems: 'center',
                     justifyContent: 'center',
                   }}

@@ -100,7 +100,7 @@ export default function LoginScreen({ navigation }) {
               activeOpacity={0.8}
             >
               <Text className="text-primary text-lg font-bold">LOGIN</Text>
-              <Feather name="arrow-right" size={20} color="#151D1A" style={{ marginLeft: 8 }} />
+              <Feather name="arrow-right" size={20} color="#000000" style={{ marginLeft: 8 }} />
             </TouchableOpacity>
           </View>
 

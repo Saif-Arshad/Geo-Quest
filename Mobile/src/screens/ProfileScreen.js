@@ -39,7 +39,7 @@ export default function ProfileScreen({ navigation }) {
 
   return (
     <View className="flex-1 bg-primary" style={{ paddingTop: insets.top }}>
-      <StatusBar barStyle="light-content" backgroundColor="#151D1A" />
+      <StatusBar barStyle="light-content" backgroundColor="#000000" />
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom: 30 }}>
         {/* Header */}
         <View className="flex-row items-center justify-between px-5 pt-4 pb-2">
@@ -58,7 +58,7 @@ export default function ProfileScreen({ navigation }) {
               height: 90,
               borderWidth: 2,
               borderColor: '#2DD4BF',
-              backgroundColor: '#1A4231',
+              backgroundColor: '#262626',
             }}
           >
             <Feather name="user" size={40} color="#2DD4BF" />
@@ -68,7 +68,7 @@ export default function ProfileScreen({ navigation }) {
         </View>
 
         {/* Stats Row */}
-        <View className="flex-row justify-around mx-5 mt-6 py-4 rounded-xl" style={{ backgroundColor: 'rgba(26, 66, 49, 0.3)', borderWidth: 1, borderColor: 'rgba(55, 65, 81, 0.5)' }}>
+        <View className="flex-row justify-around mx-5 mt-6 py-4 rounded-xl" style={{ backgroundColor: 'rgba(38, 38, 38, 0.3)', borderWidth: 1, borderColor: 'rgba(55, 65, 81, 0.5)' }}>
           <View className="items-center">
             <Text className="text-white text-lg font-bold">{USER.points.toLocaleString()}</Text>
             <Text className="text-gray-500 text-xs mt-0.5">POINTS</Text>
@@ -103,7 +103,7 @@ export default function ProfileScreen({ navigation }) {
             >
               <View
                 className="items-center justify-center rounded-xl mr-3"
-                style={{ width: 48, height: 48, backgroundColor: '#1A4231' }}
+                style={{ width: 48, height: 48, backgroundColor: '#262626' }}
               >
                 <Ionicons name="calendar-outline" size={22} color="#C9A84C" />
               </View>

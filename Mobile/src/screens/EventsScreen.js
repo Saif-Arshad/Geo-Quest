@@ -23,7 +23,7 @@ function EventCard({ event, onPress }) {
     <TouchableOpacity
       className="flex-row items-center rounded-xl px-4 py-3.5 mb-3"
       style={{
-        backgroundColor: 'rgba(26, 66, 49, 0.3)',
+        backgroundColor: 'rgba(38, 38, 38, 0.3)',
         borderWidth: 1,
         borderColor: 'rgba(55, 65, 81, 0.5)',
       }}
@@ -32,7 +32,7 @@ function EventCard({ event, onPress }) {
     >
       <View
         className="items-center justify-center rounded-2xl mr-3"
-        style={{ width: 48, height: 48, backgroundColor: '#1A4231' }}
+        style={{ width: 48, height: 48, backgroundColor: '#262626' }}
       >
         <Ionicons name="calendar-outline" size={22} color="#C9A84C" />
       </View>
@@ -87,7 +87,7 @@ export default function EventsScreen({ navigation }) {
 
   return (
     <View className="flex-1 bg-primary">
-      <StatusBar barStyle="light-content" backgroundColor="#151D1A" />
+      <StatusBar barStyle="light-content" backgroundColor="#000000" />
 
       {/* Header */}
       <View
@@ -105,7 +105,7 @@ export default function EventsScreen({ navigation }) {
         <View
           className="flex-row items-center rounded-xl px-4"
           style={{
-            backgroundColor: '#1A4231',
+            backgroundColor: '#262626',
             height: 46,
             borderWidth: 1,
             borderColor: 'rgba(55, 65, 81, 0.5)',
@@ -131,7 +131,7 @@ export default function EventsScreen({ navigation }) {
       <View
         className="flex-row mx-5 mt-4 rounded-xl overflow-hidden"
         style={{
-          backgroundColor: '#1A4231',
+          backgroundColor: '#262626',
           borderWidth: 1,
           borderColor: 'rgba(55, 65, 81, 0.5)',
         }}
@@ -154,7 +154,7 @@ export default function EventsScreen({ navigation }) {
             <Text
               className="text-xs font-bold"
               style={{
-                color: filter === tab.key ? '#151D1A' : '#6B7280',
+                color: filter === tab.key ? '#000000' : '#6B7280',
               }}
             >
               {tab.label}

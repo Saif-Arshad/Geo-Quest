@@ -40,7 +40,7 @@ export default function HomeScreen({ navigation }) {
 
   return (
     <View className="flex-1 bg-primary">
-      <StatusBar barStyle="light-content" backgroundColor="#151D1A" />
+      <StatusBar barStyle="light-content" backgroundColor="#000000" />
       <ScrollView contentContainerStyle={{ paddingBottom: 20 }} showsVerticalScrollIndicator={false}>
         <View className="px-5 pt-14 pb-4">
           <View className="flex-row items-center justify-between">
@@ -122,7 +122,7 @@ export default function HomeScreen({ navigation }) {
                 </Text>
               </View>
               <TouchableOpacity className="w-10 h-10 rounded-full bg-accent items-center justify-center">
-                <Feather name="navigation" size={18} color="#151D1A" />
+                <Feather name="navigation" size={18} color="#000000" />
               </TouchableOpacity>
             </View>
           </View>
@@ -131,7 +131,7 @@ export default function HomeScreen({ navigation }) {
           <TouchableOpacity
             className="rounded-2xl overflow-hidden"
             style={{
-              backgroundColor: 'rgba(26, 66, 49, 0.4)',
+              backgroundColor: 'rgba(38, 38, 38, 0.4)',
               borderWidth: 1,
               borderColor: 'rgba(55, 65, 81, 0.5)',
             }}
@@ -141,7 +141,7 @@ export default function HomeScreen({ navigation }) {
             <View className="px-5 py-5 flex-row items-center">
               <View
                 className="items-center justify-center rounded-2xl mr-4"
-                style={{ width: 52, height: 52, backgroundColor: '#1A4231' }}
+                style={{ width: 52, height: 52, backgroundColor: '#262626' }}
               >
                 <Ionicons name="calendar" size={24} color="#C9A84C" />
               </View>

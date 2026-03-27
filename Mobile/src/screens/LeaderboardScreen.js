@@ -47,7 +47,7 @@ function RankBadge({ rank }) {
           backgroundColor: badgeColors[rank],
         }}
       >
-        <Text className="text-xs font-bold" style={{ color: '#151D1A' }}>
+        <Text className="text-xs font-bold" style={{ color: '#000000' }}>
           {rank}
         </Text>
       </View>
@@ -70,7 +70,7 @@ function LeaderboardRow({ rank, name, title, experiencePoints, isCurrentUser }) 
         paddingVertical: 12,
         backgroundColor: isCurrentUser
           ? 'rgba(201, 168, 76, 0.1)'
-          : 'rgba(26, 66, 49, 0.3)',
+          : 'rgba(38, 38, 38, 0.3)',
         borderWidth: 1,
         borderColor: isCurrentUser ? '#C9A84C' : 'rgba(55, 65, 81, 0.5)',
       }}
@@ -82,7 +82,7 @@ function LeaderboardRow({ rank, name, title, experiencePoints, isCurrentUser }) 
         style={{
           width: 40,
           height: 40,
-          backgroundColor: '#1A4231',
+          backgroundColor: '#262626',
         }}
       >
         <Feather name="user" size={18} color="#C9A84C" />
@@ -124,7 +124,7 @@ export default function LeaderboardScreen() {
 
   return (
     <View className="flex-1 bg-primary">
-      <StatusBar barStyle="light-content" backgroundColor="#151D1A" />
+      <StatusBar barStyle="light-content" backgroundColor="#000000" />
 
       {/* Header */}
       <View

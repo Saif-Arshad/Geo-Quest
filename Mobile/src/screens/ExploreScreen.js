@@ -14,48 +14,48 @@ import { Feather, Ionicons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 const DARK_MAP_STYLE = [
-  { elementType: 'geometry', stylers: [{ color: '#1a2e23' }] },
-  { elementType: 'labels.text.stroke', stylers: [{ color: '#1a2e23' }] },
-  { elementType: 'labels.text.fill', stylers: [{ color: '#4a6555' }] },
+  { elementType: 'geometry', stylers: [{ color: '#1a1a1a' }] },
+  { elementType: 'labels.text.stroke', stylers: [{ color: '#1a1a1a' }] },
+  { elementType: 'labels.text.fill', stylers: [{ color: '#737373' }] },
   {
     featureType: 'administrative',
     elementType: 'geometry.stroke',
-    stylers: [{ color: '#243d30' }],
+    stylers: [{ color: '#262626' }],
   },
   {
     featureType: 'road',
     elementType: 'geometry',
-    stylers: [{ color: '#243d30' }],
+    stylers: [{ color: '#262626' }],
   },
   {
     featureType: 'road',
     elementType: 'geometry.stroke',
-    stylers: [{ color: '#1a2e23' }],
+    stylers: [{ color: '#1a1a1a' }],
   },
   {
     featureType: 'water',
     elementType: 'geometry',
-    stylers: [{ color: '#132118' }],
+    stylers: [{ color: '#0a0a0a' }],
   },
   {
     featureType: 'poi',
     elementType: 'geometry',
-    stylers: [{ color: '#1f3329' }],
+    stylers: [{ color: '#171717' }],
   },
   {
     featureType: 'poi.park',
     elementType: 'geometry',
-    stylers: [{ color: '#1f3329' }],
+    stylers: [{ color: '#171717' }],
   },
   {
     featureType: 'landscape',
     elementType: 'geometry',
-    stylers: [{ color: '#1a2e23' }],
+    stylers: [{ color: '#1a1a1a' }],
   },
   {
     featureType: 'transit',
     elementType: 'geometry',
-    stylers: [{ color: '#1a2e23' }],
+    stylers: [{ color: '#1a1a1a' }],
   },
 ];
 
@@ -170,7 +170,7 @@ export default function ExploreScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="light-content" backgroundColor="#151D1A" />
+      <StatusBar barStyle="light-content" backgroundColor="#000000" />
 
       {/* Map */}
       <MapView
@@ -193,7 +193,7 @@ export default function ExploreScreen({ navigation }) {
             <View style={styles.markerContainer}>
               {marker.type === 'active' ? (
                 <View style={styles.activeMarker}>
-                  <Ionicons name="star" size={18} color="#151D1A" />
+                  <Ionicons name="star" size={18} color="#000000" />
                 </View>
               ) : (
                 <View style={styles.normalMarker}>
@@ -261,7 +261,7 @@ export default function ExploreScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#151D1A',
+    backgroundColor: '#000000',
   },
   // Left Controls
   leftControls: {
@@ -282,14 +282,14 @@ const styles = StyleSheet.create({
     width: 42,
     height: 42,
     borderRadius: 21,
-    backgroundColor: 'rgba(21, 29, 26, 0.85)',
+    backgroundColor: 'rgba(0, 0, 0, 0.85)',
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 1,
     borderColor: 'rgba(255,255,255,0.08)',
   },
   starBtn: {
-    backgroundColor: 'rgba(26, 66, 49, 0.9)',
+    backgroundColor: 'rgba(38, 38, 38, 0.9)',
   },
   // Markers
   markerContainer: {
@@ -310,11 +310,11 @@ const styles = StyleSheet.create({
     width: 28,
     height: 28,
     borderRadius: 14,
-    backgroundColor: 'rgba(26, 66, 49, 0.9)',
+    backgroundColor: 'rgba(38, 38, 38, 0.9)',
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 2,
-    borderColor: '#2D6B4A',
+    borderColor: '#404040',
   },
   normalMarkerInner: {
     width: 10,
@@ -329,7 +329,7 @@ const styles = StyleSheet.create({
     right: 16,
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: 'rgba(21, 29, 26, 0.95)',
+    backgroundColor: 'rgba(0, 0, 0, 0.95)',
     borderRadius: 16,
     padding: 12,
     borderWidth: 1,
@@ -347,14 +347,14 @@ const styles = StyleSheet.create({
   },
   questBadge: {
     alignSelf: 'flex-start',
-    backgroundColor: 'rgba(26, 66, 49, 0.8)',
+    backgroundColor: 'rgba(38, 38, 38, 0.8)',
     paddingHorizontal: 8,
     paddingVertical: 2,
     borderRadius: 4,
     marginBottom: 4,
   },
   questBadgeText: {
-    color: '#4ADE80',
+    color: '#C9A84C',
     fontSize: 9,
     fontWeight: '800',
     letterSpacing: 1,
@@ -375,7 +375,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
   },
   startBtn: {
-    backgroundColor: '#1A4231',
+    backgroundColor: '#262626',
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 10,

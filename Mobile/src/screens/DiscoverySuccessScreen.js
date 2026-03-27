@@ -36,7 +36,7 @@ export default function DiscoverySuccessScreen({ navigation, route }) {
               width: 80,
               height: 80,
               borderRadius: 16,
-              backgroundColor: '#1A4231',
+              backgroundColor: '#262626',
             }}
           >
             <MaterialCommunityIcons name="treasure-chest" size={40} color="#C9A84C" />

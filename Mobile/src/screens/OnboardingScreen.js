@@ -37,7 +37,7 @@ export default function OnboardingScreen({ navigation }) {
 
   return (
     <View className="flex-1 bg-primary">
-      <StatusBar barStyle="light-content" backgroundColor="#151D1A" />
+      <StatusBar barStyle="light-content" backgroundColor="#000000" />
 
       <View className="items-center pt-12 pb-4">
         <Image

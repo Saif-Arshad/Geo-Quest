@@ -34,7 +34,7 @@ export default function NewEventScreen({ navigation }) {
 
   return (
     <View className="flex-1 bg-primary">
-      <StatusBar barStyle="light-content" backgroundColor="#151D1A" />
+      <StatusBar barStyle="light-content" backgroundColor="#000000" />
 
       {/* Header */}
       <View
@@ -68,7 +68,7 @@ export default function NewEventScreen({ navigation }) {
                 borderWidth: 2,
                 borderColor: image ? '#C9A84C' : 'rgba(107, 114, 128, 0.4)',
                 borderStyle: image ? 'solid' : 'dashed',
-                backgroundColor: '#1A4231',
+                backgroundColor: '#262626',
                 overflow: 'hidden',
               }}
             >
@@ -84,7 +84,7 @@ export default function NewEventScreen({ navigation }) {
                       position: 'absolute',
                       bottom: 8,
                       right: 8,
-                      backgroundColor: 'rgba(21, 29, 26, 0.85)',
+                      backgroundColor: 'rgba(0, 0, 0, 0.85)',
                       borderRadius: 20,
                       padding: 8,
                     }}
@@ -197,7 +197,7 @@ export default function NewEventScreen({ navigation }) {
               className="bg-accent py-4 rounded-full flex-row items-center justify-center"
               activeOpacity={0.8}
             >
-              <Feather name="plus-circle" size={18} color="#151D1A" style={{ marginRight: 8 }} />
+              <Feather name="plus-circle" size={18} color="#000000" style={{ marginRight: 8 }} />
               <Text className="text-primary text-base font-bold">Create Event</Text>
             </TouchableOpacity>
           </View>

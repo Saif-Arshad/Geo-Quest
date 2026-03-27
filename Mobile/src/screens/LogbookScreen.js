@@ -50,7 +50,7 @@ const DIFFICULTY_COLORS = {
 export default function LogbookScreen({ navigation }) {
   return (
     <View className="flex-1 bg-primary">
-      <StatusBar barStyle="light-content" backgroundColor="#151D1A" />
+      <StatusBar barStyle="light-content" backgroundColor="#000000" />
 
       {/* Header */}
       <View
@@ -85,7 +85,7 @@ export default function LogbookScreen({ navigation }) {
             >
               <View
                 className="flex-1 items-center justify-end pb-3"
-                style={{ backgroundColor: 'rgba(21, 29, 26, 0.7)' }}
+                style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)' }}
               >
                 <Text className="text-white text-3xl font-bold">42</Text>
                 <Text className="text-gray-400 text-xs mt-1 uppercase tracking-wider">
@@ -107,7 +107,7 @@ export default function LogbookScreen({ navigation }) {
             >
               <View
                 className="flex-1 items-center justify-end pb-3"
-                style={{ backgroundColor: 'rgba(21, 29, 26, 0.7)' }}
+                style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)' }}
               >
                 <Text className="text-white text-3xl font-bold">12,400</Text>
                 <Text className="text-gray-400 text-xs mt-1 uppercase tracking-wider">

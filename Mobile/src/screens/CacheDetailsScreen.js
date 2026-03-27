@@ -46,7 +46,7 @@ export default function CacheDetailsScreen({ navigation, route }) {
 
   return (
     <View className="flex-1 bg-primary">
-      <StatusBar barStyle="light-content" backgroundColor="#151D1A" />
+      <StatusBar barStyle="light-content" backgroundColor="#000000" />
 
       {/* Header */}
       <View
@@ -162,7 +162,7 @@ export default function CacheDetailsScreen({ navigation, route }) {
           <Feather
             name="lock"
             size={18}
-            color="#151D1A"
+            color="#000000"
             style={{ marginRight: 8 }}
           />
           <Text className="text-primary text-base font-bold">
