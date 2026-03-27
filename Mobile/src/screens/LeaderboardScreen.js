@@ -1,20 +1,11 @@
-import { useState } from 'react';
 import {
   View,
   Text,
   TouchableOpacity,
   FlatList,
-  ScrollView,
   StatusBar,
 } from 'react-native';
-import { Feather, Ionicons } from '@expo/vector-icons';
-
-const MOCK_EVENTS = [
-  { id: '1', title: 'Forest Mystery Quest', date: 'Mar 15 - Mar 22', players: 24, status: 'Live' },
-  { id: '2', title: 'Mountain Peak Challenge', date: 'Mar 20 - Mar 27', players: 18, status: 'Live' },
-  { id: '3', title: 'Urban Cache Sprint', date: 'Mar 25 - Apr 1', players: 32, status: 'Upcoming' },
-  { id: '4', title: 'River Trail Adventure', date: 'Apr 2 - Apr 9', players: 12, status: 'Upcoming' },
-];
+import { Feather } from '@expo/vector-icons';
 
 const MOCK_LEADERBOARD = [
   { id: '1', name: 'Julian North', title: 'Mountain King', experiencePoints: 24580 },
@@ -121,42 +112,7 @@ function LeaderboardRow({ rank, name, title, experiencePoints, isCurrentUser }) 
   );
 }
 
-function EventCard({ event, onPress }) {
-  return (
-    <TouchableOpacity
-      className="flex-row items-center mx-5 mb-3 rounded-xl px-4 py-3"
-      style={{ backgroundColor: 'rgba(26, 66, 49, 0.3)', borderWidth: 1, borderColor: 'rgba(55, 65, 81, 0.5)' }}
-      onPress={onPress}
-      activeOpacity={0.7}
-    >
-      <View
-        className="items-center justify-center rounded-full mr-3"
-        style={{ width: 44, height: 44, backgroundColor: '#1A4231' }}
-      >
-        <Ionicons name="calendar-outline" size={20} color="#C9A84C" />
-      </View>
-      <View className="flex-1">
-        <Text className="text-white text-sm font-semibold">{event.title}</Text>
-        <Text className="text-gray-500 text-xs mt-0.5">{event.date} · {event.players} players</Text>
-      </View>
-      <View
-        className="rounded-full px-2.5 py-1"
-        style={{ backgroundColor: event.status === 'Live' ? 'rgba(45, 212, 191, 0.15)' : 'rgba(201, 168, 76, 0.15)' }}
-      >
-        <Text
-          className="text-xs font-bold"
-          style={{ color: event.status === 'Live' ? '#2DD4BF' : '#C9A84C' }}
-        >
-          {event.status}
-        </Text>
-      </View>
-    </TouchableOpacity>
-  );
-}
-
-export default function LeaderboardScreen({ navigation }) {
-  const [activeTab, setActiveTab] = useState('global');
-
+export default function LeaderboardScreen() {
   const renderItem = ({ item, index }) => (
     <LeaderboardRow
       rank={index + 1}
@@ -182,65 +138,15 @@ export default function LeaderboardScreen({ navigation }) {
         </TouchableOpacity>
       </View>
 
-      {/* Tab Switcher */}
-      <View className="flex-row mx-5 mt-5">
-        <TouchableOpacity
-          className="flex-1 items-center pb-3"
-          onPress={() => setActiveTab('global')}
-          style={{
-            borderBottomWidth: 2,
-            borderBottomColor: activeTab === 'global' ? '#C9A84C' : 'transparent',
-          }}
-        >
-          <Text
-            className={`text-sm font-semibold ${
-              activeTab === 'global' ? 'text-accent' : 'text-gray-500'
-            }`}
-          >
-            Global
-          </Text>
-        </TouchableOpacity>
+      <View className="h-px bg-gray-800 mx-5 mt-4" />
 
-        <TouchableOpacity
-          className="flex-1 items-center pb-3"
-          onPress={() => setActiveTab('events')}
-          style={{
-            borderBottomWidth: 2,
-            borderBottomColor: activeTab === 'events' ? '#C9A84C' : 'transparent',
-          }}
-        >
-          <Text
-            className={`text-sm font-semibold ${
-              activeTab === 'events' ? 'text-accent' : 'text-gray-500'
-            }`}
-          >
-            Events
-          </Text>
-        </TouchableOpacity>
-      </View>
-
-      <View className="h-px bg-gray-800 mx-5" />
-
-      {/* Content */}
-      {activeTab === 'global' ? (
-        <FlatList
-          data={MOCK_LEADERBOARD}
-          keyExtractor={(item) => item.id}
-          renderItem={renderItem}
-          contentContainerStyle={{ paddingTop: 16, paddingBottom: 100 }}
-          showsVerticalScrollIndicator={false}
-        />
-      ) : (
-        <ScrollView contentContainerStyle={{ paddingTop: 16, paddingBottom: 100 }} showsVerticalScrollIndicator={false}>
-          {MOCK_EVENTS.map((event) => (
-            <EventCard
-              key={event.id}
-              event={event}
-              onPress={() => navigation.navigate('EventDetails', { event: { title: event.title } })}
-            />
-          ))}
-        </ScrollView>
-      )}
+      <FlatList
+        data={MOCK_LEADERBOARD}
+        keyExtractor={(item) => item.id}
+        renderItem={renderItem}
+        contentContainerStyle={{ paddingTop: 16, paddingBottom: 100 }}
+        showsVerticalScrollIndicator={false}
+      />
 
       {/* Pinned Current User Row */}
       <View className="absolute left-0 right-0" style={{ bottom: 0 }}>

@@ -1,5 +1,5 @@
 import { View, Text, TouchableOpacity, Image, ScrollView, StatusBar } from 'react-native';
-import { Feather } from '@expo/vector-icons';
+import { Feather, Ionicons } from '@expo/vector-icons';
 import MapView, { Marker } from 'react-native-maps';
 
 const DUMMY_USER = {
@@ -127,7 +127,34 @@ export default function HomeScreen({ navigation }) {
             </View>
           </View>
         </View>
-
+     <View className="px-5 mt-8">
+          <TouchableOpacity
+            className="rounded-2xl overflow-hidden"
+            style={{
+              backgroundColor: 'rgba(26, 66, 49, 0.4)',
+              borderWidth: 1,
+              borderColor: 'rgba(55, 65, 81, 0.5)',
+            }}
+            activeOpacity={0.8}
+            onPress={() => navigation.navigate('Events')}
+          >
+            <View className="px-5 py-5 flex-row items-center">
+              <View
+                className="items-center justify-center rounded-2xl mr-4"
+                style={{ width: 52, height: 52, backgroundColor: '#1A4231' }}
+              >
+                <Ionicons name="calendar" size={24} color="#C9A84C" />
+              </View>
+              <View className="flex-1">
+                <Text className="text-white text-base font-bold">Events</Text>
+                <Text className="text-gray-400 text-xs mt-1">
+                  Browse and join geocaching events near you
+                </Text>
+              </View>
+              <Feather name="chevron-right" size={20} color="#6B7280" />
+            </View>
+          </TouchableOpacity>
+        </View>
         {/* Cache History */}
         <View className="px-5 mt-8">
           <View className="flex-row justify-between items-center mb-4">
@@ -157,6 +184,9 @@ export default function HomeScreen({ navigation }) {
             </TouchableOpacity>
           ))}
         </View>
+
+        {/* Events Section */}
+   
       </ScrollView>
     </View>
   );

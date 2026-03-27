@@ -11,6 +11,7 @@ import EventDetailsScreen from './src/screens/EventDetailsScreen';
 import LogbookScreen from './src/screens/LogbookScreen';
 import CreateCacheScreen from './src/screens/CreateCacheScreen';
 import NewEventScreen from './src/screens/NewEventScreen';
+import EventsScreen from './src/screens/EventsScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -39,6 +40,7 @@ export default function App() {
             options={{ animation: 'slide_from_bottom' }}
           />
           <Stack.Screen name="EventDetails" component={EventDetailsScreen} />
+          <Stack.Screen name="Events" component={EventsScreen} />
           <Stack.Screen name="Logbook" component={LogbookScreen} />
           <Stack.Screen name="CreateCache" component={CreateCacheScreen} />
           <Stack.Screen
